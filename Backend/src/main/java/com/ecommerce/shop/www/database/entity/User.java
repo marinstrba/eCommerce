@@ -5,6 +5,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.HashSet;
+import java.util.Set;
+
 @Entity
 @Table(name="user")
 @NoArgsConstructor
@@ -27,4 +30,8 @@ public class User {
     private String password;
     @Column(name = "phone_number")
     private String phoneNumber;
+    @OneToMany(mappedBy = "user")
+    private Set<Order> orders = new HashSet<>();
+    @OneToMany(mappedBy = "user")
+    private Set<Review> reviews = new HashSet<>();
 }

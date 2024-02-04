@@ -5,6 +5,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.HashSet;
+import java.util.Set;
+
 @Entity
 @Table(name="product")
 @NoArgsConstructor
@@ -27,4 +30,8 @@ public class Product {
     private String productCategory;
     @Column(name = "image_url")
     private String imageUrl;
+    @OneToMany(mappedBy = "product")
+    private Set<OrderDetails> orderDetailsSet = new HashSet<>();
+    @OneToMany(mappedBy = "product")
+    private Set<Review> reviews = new HashSet<>();
 }

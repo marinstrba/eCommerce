@@ -6,6 +6,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "order")
@@ -17,7 +19,8 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "order_id")
     private Long orderId;
-    @Column(name = "user_id")
+    @ManyToOne
+    @JoinColumn(name = "user_id")
     private User user;
     @Column(name = "order_date")
     private Date orderDate;
@@ -25,4 +28,6 @@ public class Order {
     private OrderStatus orderStatus;
     @Column(name = "price")
     private Double price;
+    @OneToMany(mappedBy = "order")
+    private Set<OrderDetails> orderDetails = new HashSet<>();
 }
