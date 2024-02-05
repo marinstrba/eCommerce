@@ -1,0 +1,97 @@
+.containers{
+  width: 90%;
+  margin: 0 auto;
+}
+
+.footer-middle {
+  padding: 30px 0;
+  background: #1d1d1d;
+}
+
+.footer-middle h2 {
+  font-size: 20px;
+  color: white;
+  font-weight: 700;
+}
+
+.item {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input {
+  border: 0;
+  outline: 0;
+  color: #ccc;
+  background: #111;
+  padding: 0 16px;
+  margin-right: 0;
+  margin: 0;
+  min-width: 300px;
+  height: 45px;
+  font-size: 14px;
+  font-style: italic;
+  border-radius: 20px 0 0 20px;
+}
+
+.btn {
+  top: 0;
+  right: 0;
+  color: white;
+  background: #111;
+  padding: 0 25px;
+  border-radius: 0 20px 20px 0;
+  height: 45px;
+  border: none;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+.btn:active, .btn:focus {
+    border: 0!important;
+    outline: 0!important;
+    box-shadow: none!important;
+}
+
+.btn:hover i {
+  color: red;
+}
+
+.social ul{
+  padding: 0;
+  margin: 0;
+}
+
+.social ul li {
+  position: relative;
+  display: inline-block;
+  margin-right: 5px;
+  list-style-type: none;
+}
+.social ul li a {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .2);
+  display: inline-block;
+  color: #c9c9c9;
+  transform: all .3s ease;
+}
+
+.social ul li a i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.social ul li a:hover {
+  background: red;
+  color: white;
+}
+
+@media (max-width: 1234px) {
+  .social {
+    display: none;
+  }
