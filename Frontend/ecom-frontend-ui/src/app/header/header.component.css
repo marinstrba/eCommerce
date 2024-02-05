@@ -1,7 +1,10 @@
 header{
   padding: 12px 0;
   background: #222;
-
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
 }
 
 .logo-text{
@@ -24,6 +27,7 @@ header{
 }
 
 .menu ul li{
+  font-weight: bold;
   list-style-type: none;
   color: white;
   display: inline-block;
@@ -32,7 +36,7 @@ header{
 }
 
 .menu ul li:hover{
-  color: #ddd;
+  color: #bbb;
   cursor: pointer;
   transition: 0.4s ease-in-out;
 }
@@ -51,6 +55,32 @@ header{
 
 .icons i:hover {
   color: #ddd;
+}
+
+@media only screen and (max-width: 1400px){
+
+.menu ul li{
+  font-weight: bold;
+  list-style-type: none;
+  color: white;
+  display: inline-block;
+  font-size: 13px;
+  margin-left: 24px;
+}
+
+}
+
+@media only screen and (max-width: 960px){
+
+.menu ul li{
+  font-weight: bold;
+  list-style-type: none;
+  color: white;
+  display: inline-block;
+  font-size: 10px;
+  margin-left: 20px;
+}
+
 }
 
 @media only screen and (max-width: 768px){
