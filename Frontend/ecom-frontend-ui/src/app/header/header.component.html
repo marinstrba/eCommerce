@@ -1,1 +1,30 @@
-<p>header works!</p>
+<header>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-sm-3 col-3">
+        <div class="logo">
+          <div class="logo-text">Fight<span class="store-sign">Store</span></div>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-6 col-6 d-flex align-items-center justify-content-center">
+        <div class="menu-icon" [class.menu-icon_Class]="menuIconVariable" (click)="openMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu" [class.menuClass]="menuVariable">
+          <ul>
+            <li>Home</li>
+            <li>Shop</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-3 col-3 d-flex align-items-center justify-content-center">
+        <div class="icons" [class.menuClass]="menuVariable">
+          <i class="fas fa-user"></i>
+          <i class="fas fa-shopping-cart"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

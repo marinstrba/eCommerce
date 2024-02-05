@@ -1,0 +1,128 @@
+header{
+  padding: 12px 0;
+  background: #222;
+
+}
+
+.logo-text{
+  font-weight: bold;
+  font-size: 24px;
+  color: white;
+}
+
+.store-sign{
+  color: red;
+}
+
+.menu{
+  margin-top: 0px;
+}
+
+.menu ul{
+  padding: 0;
+  margin: 0;
+}
+
+.menu ul li{
+  list-style-type: none;
+  color: white;
+  display: inline-block;
+  font-size: 20px;
+  margin-left: 24px;
+}
+
+.menu ul li:hover{
+  color: #ddd;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+
+.icons {
+  padding-top: 5px;
+  display: inline-block;
+  margin-left: 24px;
+}
+
+.icons i {
+  font-size: 20px;
+  margin-left: 24px;
+  color: #fff;
+}
+
+.icons i:hover {
+  color: #ddd;
+}
+
+@media only screen and (max-width: 768px){
+.menu {
+  position: fixed;
+  right: -280px;
+  top: 60px;
+  width: 280px;
+  height: 100%;
+  background: #222;
+  transition: 0.4s ease-in-out;
+}
+.menu ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.icons {
+  position: fixed;
+  right: -280px;
+  top: 165px;
+  background: #222;
+  width: 280px;
+  height: 100%;
+  transition: 0.4s ease-in-out;
+}
+
+.icons i {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.menu-icon {
+  display: inline-block;
+  position: relative;
+  right: -192px;
+  top: 3px;
+}
+
+.menu-icon span{
+  width: 32px;
+  height: 3px;
+  background: #fff;
+  display: block;
+  transition: 0.2s ease-in-out;
+}
+
+.menu-icon span:nth-child(2){
+  margin: 4px 0;
+}
+
+.menu-icon_Class span:nth-child(2){
+  display: none;
+}
+
+.menu-icon_Class span:nth-child(1){
+  transform: rotate(40deg);
+}
+
+.menu-icon_Class span:nth-child(3){
+  transform: rotate(-40deg);
+  margin-top: -3px;
+}
+
+.menuClass {
+  right: 0;
+  transition: 0.4s ease-in-out;
+}
+
+}
+

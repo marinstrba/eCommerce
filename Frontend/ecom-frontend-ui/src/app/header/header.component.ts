@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
+  menuVariable:boolean = false;
+  menuIconVariable:boolean = false;
 
+  openMenu(){
+    this.menuVariable = !this.menuVariable;
+    this.menuIconVariable = ! this.menuIconVariable;
+  }
 }
