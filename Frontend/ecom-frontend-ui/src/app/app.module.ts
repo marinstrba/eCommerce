@@ -15,6 +15,11 @@ import { FailComponent } from './fail/fail.component';
 import { ShopComponent } from './shop/shop.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { CartComponent } from './cart/cart.component';
+import { TestimonialComponent } from './home/testimonial/testimonial.component';
+import { FactsComponent } from './home/facts/facts.component';
+import { SearchComponent } from './header/search/search.component';
+import { ContactComponent } from './contact/contact.component';
+import { TopbarComponent } from './header/topbar/topbar.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +35,12 @@ import { CartComponent } from './cart/cart.component';
     FailComponent,
     ShopComponent,
     UserProfileComponent,
-    CartComponent
+    CartComponent,
+    TestimonialComponent,
+    FactsComponent,
+    SearchComponent,
+    ContactComponent,
+    TopbarComponent
   ],
   imports: [
     BrowserModule,

@@ -3,6 +3,7 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    margin-top: 0px!important;
 }
 
 .carousel-item {
@@ -49,14 +50,14 @@
 @media (min-width: 992px) {
     .hero-header,
     .page-header {
-        margin-top: 152px !important;
+        margin-top: 0px !important;
     }
 }
 
 @media (max-width: 992px) {
     .hero-header,
     .page-header {
-        margin-top: 97px !important;
+        margin-top: 0px !important;
     }
 }
 /*** Hero Header end ***/
