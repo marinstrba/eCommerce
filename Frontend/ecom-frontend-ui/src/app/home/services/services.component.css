@@ -6,3 +6,28 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+.mb-0 {
+  color: white;
+  }
+
+ .bot {
+  background: black;
+ }
+
+ .bot2 {
+  background: red;
+ }
+
+ .back {
+  background: red!important;
+ }
+
+ .back2 {
+  background: black!important:
+ }
+
+.col-md-6.col-lg-4 > a, .col-md-6.col-lg-4 > a:hover {
+    text-decoration: none;
+}
+

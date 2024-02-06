@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
-import { NewsLetterComponent } from './footer/news-letter/news-letter.component';
 import { HeroComponent } from './home/hero/hero.component';
 import { FeaturesComponent } from './home/features/features.component';
 import { ServicesComponent } from './home/services/services.component';
@@ -27,7 +26,6 @@ import { TopbarComponent } from './header/topbar/topbar.component';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    NewsLetterComponent,
     HeroComponent,
     FeaturesComponent,
     ServicesComponent,

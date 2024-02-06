@@ -60,4 +60,21 @@
         margin-top: 0px !important;
     }
 }
+
+.text {
+  color: black!importnat;
+  font-weight: bold;
+}
+
+.inner-text {
+  color: red;
+}
+
+.btn {
+  background: black;
+}
+
+.btnt {
+  background: red;
+}
 /*** Hero Header end ***/

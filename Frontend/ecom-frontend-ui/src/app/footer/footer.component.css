@@ -1,12 +1,41 @@
 .footer .footer-item .btn-link {
-line-height: 35px;
-color: rgba(255, 255, 255, .5);
-transition: 0.5s;
-}
-
-.footer .footer-item .btn-link:hover {
-color: var(--bs-secondary) !important;
+    line-height: 35px;
+    color: rgba(255, 255, 255, .5);
+    transition: 0.5s;
 }
 
 .footer .footer-item p.mb-4 {
-line-height: 35px;
+    line-height: 35px;
+}
+
+.logo-sign {
+  font-weight: bold;
+  color: white!important;
+  text-decoration: none!important;
+}
+
+.sign {
+  color: red;
+}
+
+.newsletter {
+  background: red!important;
+}
+
+.readmore{
+  color: red!important;
+}
+
+.btn:hover {
+  background: red;
+}
+
+.footer .footer-item .btn-link:hover {
+  color: red;
+}
+
+
+.col-lg-3 > a, .col-lg-3 a:hover {
+    text-decoration: none;
+    color: inherit;
+}
