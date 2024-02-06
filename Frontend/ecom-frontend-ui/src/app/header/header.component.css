@@ -1,158 +1,101 @@
-header{
-  padding: 12px 0;
-  background: #222;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 100;
+/*** Topbar Start ***/
+.fixed-top {
+    transition: 0.5s;
+    background: var(--bs-white);
+    border: 0;
 }
 
-.logo-text{
-  font-weight: bold;
-  font-size: 24px;
-  color: white;
+.topbar {
+    padding: 20px;
+    border-radius: 230px 100px;
 }
 
-.store-sign{
-  color: red;
-}
-
-.menu{
-  margin-top: 0px;
-}
-
-.menu ul{
-  padding: 0;
-  margin: 0;
-}
-
-.menu ul li{
-  font-weight: bold;
-  list-style-type: none;
-  color: white;
-  display: inline-block;
-  font-size: 20px;
-  margin-left: 24px;
-}
-
-.menu ul li:hover{
-  color: #bbb;
-  cursor: pointer;
-  transition: 0.4s ease-in-out;
-}
-
-.icons {
-  padding-top: 5px;
-  display: inline-block;
-  margin-left: 24px;
-}
-
-.icons i {
-  font-size: 20px;
-  margin-left: 24px;
-  color: #fff;
-}
-
-.icons i:hover {
-  color: #ddd;
-}
-
-@media only screen and (max-width: 1400px){
-
-.menu ul li{
-  font-weight: bold;
-  list-style-type: none;
-  color: white;
-  display: inline-block;
-  font-size: 13px;
-  margin-left: 24px;
-}
-
-}
-
-@media only screen and (max-width: 960px){
-
-.menu ul li{
-  font-weight: bold;
-  list-style-type: none;
-  color: white;
-  display: inline-block;
-  font-size: 10px;
-  margin-left: 20px;
-}
-
-}
-
-@media only screen and (max-width: 768px){
-.menu {
-  position: fixed;
-  right: -280px;
-  top: 60px;
-  width: 280px;
-  height: 100%;
-  background: #222;
-  transition: 0.4s ease-in-out;
-}
-.menu ul li {
+.topbar .top-info {
+    font-size: 15px;
+    line-height: 0;
+    letter-spacing: 1px;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    padding-top: 20px;
 }
 
-.icons {
-  position: fixed;
-  right: -280px;
-  top: 165px;
-  background: #222;
-  width: 280px;
-  height: 100%;
-  transition: 0.4s ease-in-out;
+.topbar .top-link {
+    font-size: 15px;
+    line-height: 0;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
 }
 
-.icons i {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 20px;
+.topbar .top-link a {
+    letter-spacing: 1px;
 }
 
-.menu-icon {
-  display: inline-block;
-  position: relative;
-  right: -192px;
-  top: 3px;
+.topbar .top-link a small:hover {
+    color: var(--bs-secondary) !important;
+    transition: 0.5s;
 }
 
-.menu-icon span{
-  width: 32px;
-  height: 3px;
-  background: #fff;
-  display: block;
-  transition: 0.2s ease-in-out;
+.topbar .top-link a small:hover i {
+    color: var(--bs-primary) !important;
+}
+/*** Topbar End ***/
+
+/*** Navbar Start ***/
+.navbar .navbar-nav .nav-link {
+    padding: 10px 15px;
+    font-size: 16px;
+    transition: .5s;
 }
 
-.menu-icon span:nth-child(2){
-  margin: 4px 0;
+.navbar {
+    height: 100px;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
 }
 
-.menu-icon_Class span:nth-child(2){
-  display: none;
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active,
+.fixed-top.bg-white .navbar .navbar-nav .nav-link:hover,
+.fixed-top.bg-white .navbar .navbar-nav .nav-link.active {
+    color: var(--bs-primary);
 }
 
-.menu-icon_Class span:nth-child(1){
-  transform: rotate(40deg);
+.navbar .dropdown-toggle::after {
+    border: none;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 700;
+    vertical-align: middle;
+    margin-left: 8px;
 }
 
-.menu-icon_Class span:nth-child(3){
-  transform: rotate(-40deg);
-  margin-top: -3px;
+@media (min-width: 1200px) {
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        visibility: hidden;
+        top: 100%;
+        transform: rotateX(-75deg);
+        transform-origin: 0% 0%;
+        border: 0;
+        transition: .5s;
+        opacity: 0;
+    }
 }
 
-.menuClass {
-  right: 0;
-  transition: 0.4s ease-in-out;
+.dropdown .dropdown-menu a:hover {
+    background: var(--bs-secondary);
+    color: var(--bs-primary);
 }
 
+.navbar .nav-item:hover .dropdown-menu {
+    transform: rotateX(0deg);
+    visibility: visible;
+    background: var(--bs-light) !important;
+    border-radius: 10px !important;
+    transition: .5s;
+    opacity: 1;
 }
 
+#searchModal .modal-content {
+    background: rgba(255, 255, 255, .8);
+}
+/*** Navbar End ***/

@@ -1,1 +1,24 @@
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+}
+
+/* Ensure full height for flex container */
+html, body {
+    height: 100%;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Adjust if you've added .content-wrap */
+.content-wrap {
+    flex: 1;
+}
 
