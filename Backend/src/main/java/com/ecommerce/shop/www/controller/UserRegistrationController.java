@@ -13,10 +13,4 @@ import org.springframework.web.bind.annotation.*;
 public class UserRegistrationController {
 
     private final UserRegistrationService userRegistrationService;
-
-    @PostMapping(value = "/")
-    @ResponseStatus(HttpStatus.OK)
-    private String userRegistration(@RequestBody UserDTO){
-        return userRegistrationService.register();
-    }
 }

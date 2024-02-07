@@ -34,4 +34,12 @@ public class Product {
     private Set<OrderDetails> orderDetailsSet = new HashSet<>();
     @OneToMany(mappedBy = "product")
     private Set<Review> reviews = new HashSet<>();
+
+    public void increaseStockQuantity(){
+        this.stockQuantity++;
+    }
+
+    public void decreaseStockQuantity(){
+        this.stockQuantity--;
+    }
 }

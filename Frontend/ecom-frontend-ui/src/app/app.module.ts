@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
+import { provideHttpClient, withFetch } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +20,8 @@ import { SearchComponent } from './header/search/search.component';
 import { ContactComponent } from './contact/contact.component';
 import { TopbarComponent } from './header/topbar/topbar.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { ItemComponent } from './shop/item/item.component';
+import { ItemDetailsComponent } from './shop/item/item-details/item-details.component';
 
 @NgModule({
   declarations: [
@@ -38,14 +41,17 @@ import { CheckoutComponent } from './checkout/checkout.component';
     SearchComponent,
     ContactComponent,
     TopbarComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    ItemComponent,
+    ItemDetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    provideHttpClient(withFetch())
   ],
   bootstrap: [AppComponent]
 })
