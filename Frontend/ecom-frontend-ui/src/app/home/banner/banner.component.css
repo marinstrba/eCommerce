@@ -1,3 +1,19 @@
 .banner .banner-btn:hover {
-    background: var(--bs-primary);
+    background: black;
+}
+
+h1, .under {
+  font-weight: bold;
+}
+
+.banner {
+  background: linear-gradient(135deg, #E74C3C 0%, #2C3E50 50%, #3498DB 100%);
+}
+
+.description {
+  color: white;
+}
+
+.btn {
+  color: white!important;
 }

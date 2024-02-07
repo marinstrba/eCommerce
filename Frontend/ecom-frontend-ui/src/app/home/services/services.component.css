@@ -24,10 +24,13 @@
  }
 
  .back2 {
-  background: black!important:
+  background: black!important;
  }
 
 .col-md-6.col-lg-4 > a, .col-md-6.col-lg-4 > a:hover {
     text-decoration: none;
 }
 
+.textt {
+  color: white!important;
+}
