@@ -1,23 +1,34 @@
 import { Component, HostListener, OnInit } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
+  styleUrls: ['./header.component.css']
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
   menuVariable:boolean = false;
   menuIconVariable:boolean = false;
   isNavbarFixed:boolean = false;
 
-  openMenu(){
-    this.menuVariable = !this.menuVariable;
-    this.menuIconVariable = ! this.menuIconVariable;
+  constructor(private router: Router) {}
+
+  ngOnInit() {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        this.menuVariable = false;
+      }
+    });
   }
 
-    @HostListener('window:scroll')
-    checkScroll() {
-      const topBarHeight = 50; // Adjust this value to the actual height of your topbar
-      this.isNavbarFixed = window.scrollY > topBarHeight;
-    }
+  openMenu() {
+    this.menuVariable = !this.menuVariable;
+    this.menuIconVariable = !this.menuIconVariable;
+  }
+
+  @HostListener('window:scroll')
+  checkScroll() {
+    const topBarHeight = 50;
+    this.isNavbarFixed = window.scrollY > topBarHeight;
+  }
 }

@@ -7,6 +7,7 @@
 
 .navbar {
     height: 100px;
+    width: 100%;
     border-bottom: 1px solid rgba(255, 255, 255, .1);
 }
 
@@ -84,13 +85,9 @@ i {
     padding-top: 0px;
   }
 }
-
-.fixed-top.shadow {
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Example shadow effect */
-}
-
 .container.px-0 {
   transition: padding-top 0.5s ease;
+
 }
 
 .fixed-top {

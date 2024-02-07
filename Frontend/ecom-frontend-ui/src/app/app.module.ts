@@ -18,6 +18,7 @@ import { FactsComponent } from './home/facts/facts.component';
 import { SearchComponent } from './header/search/search.component';
 import { ContactComponent } from './contact/contact.component';
 import { TopbarComponent } from './header/topbar/topbar.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { TopbarComponent } from './header/topbar/topbar.component';
     FactsComponent,
     SearchComponent,
     ContactComponent,
-    TopbarComponent
+    TopbarComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,

@@ -4,10 +4,10 @@
   <div class="container px-0" [class.fixed-top]="isNavbarFixed" [ngStyle]="{'padding-top': isNavbarFixed ? '0px' : '50px'}">
     <nav class="navbar navbar-light bg-white navbar-expand-xl">
       <a href="#" class="navbar-brand"><h1 class="text-primary display-6 logo-sign">Fight<span class="sign">Store</span></h1></a>
-      <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+      <button (click)="openMenu()" class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
         <span class="fa fa-bars text-primary bars"></span>
       </button>
-      <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
+      <div [ngClass]="{ 'show': menuVariable }" class="collapse navbar-collapse bg-white" id="navbarCollapse">
         <div class="navbar-nav mx-auto">
           <a  href="#" class="nav-item nav-link active">Home</a>
           <a  routerLink="/shop" class="nav-item nav-link">Shop</a>
@@ -19,7 +19,7 @@
             <i class="fa fa-shopping-bag fa-2x"></i>
             <span class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-dark px-1 circle" style="top: -5px; left: 15px; height: 20px; min-width: 20px;">3</span>
           </a>
-          <a href="#" class="my-auto">
+          <a routerLink="/user-profile" class="my-auto">
             <i class="fas fa-user fa-2x"></i>
           </a>
         </div>
