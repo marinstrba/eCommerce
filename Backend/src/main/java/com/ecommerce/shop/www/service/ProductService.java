@@ -6,6 +6,7 @@ import com.ecommerce.shop.www.database.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -28,6 +29,19 @@ public class ProductService {
         return productRepository.findAll().stream().map(product -> mapToProductDTO(product)).toList();
     }
 
+    public void removeProductFromStock(String name){
+       Product product = findProductByName(name);
+       productRepository.delete(product);
+    }
+
+    public long getNumberOfProducts() {
+        return productRepository.count();
+    }
+
+    public long countProductsByCategory(String category) {
+        return productRepository.countByProductCategory(category);
+    }
+
     private static ProductDTO mapToProductDTO(Product product){
         ProductDTO productDTO = ProductDTO.builder()
                 .productName(product.getProductName())
@@ -39,4 +53,9 @@ public class ProductService {
                 .build();
         return productDTO;
     }
+
+    private Product findProductByName(String name){
+        return productRepository.findByProductName(name).orElseThrow(() -> new IllegalArgumentException("Product does not exist."));
+    }
+
 }

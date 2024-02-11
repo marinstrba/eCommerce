@@ -25,4 +25,17 @@ public class ProductController {
     public List<ProductDTO> getProduct(){
         return productService.getAllProducts();
     }
+
+    @DeleteMapping("/remove/{name}")
+    @ResponseStatus(HttpStatus.OK)
+    public void removeProduct(@PathVariable String name) {productService.removeProductFromStock(name);}
+
+    @GetMapping("/available")
+    @ResponseStatus(HttpStatus.OK)
+    public long numberOfProducts(){return productService.getNumberOfProducts();}
+
+    @GetMapping("/available/category/{category}")
+    @ResponseStatus(HttpStatus.OK)
+    public long numberOfProductsByCategory(@PathVariable String category){return productService.countProductsByCategory(category);}
+
 }
