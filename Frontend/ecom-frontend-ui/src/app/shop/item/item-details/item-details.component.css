@@ -1,3 +1,31 @@
 .fa.activated {
   color: #FFD700;
 }
+
+.btn{
+  color: black!important;
+}
+
+.btn i{
+  color: black!important;
+}
+
+.btn:hover {
+  background: red!important;
+}
+
+ul i {
+  color: red;
+}
+
+ul a {
+  color: red;
+}
+
+ul a:hover {
+  color: black!important;
+}
+
+.switch {
+  color: black!important;
+}
