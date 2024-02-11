@@ -1,0 +1,47 @@
+.fruite-name i, .fruite-name a {
+  color: red;
+}
+
+/* For Chrome */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px; /* Size of the thumb */
+    height: 18px; /* Size of the thumb */
+    background: red; /* Thumb color */
+    cursor: pointer; /* Cursor on hover */
+    border: none; /* Remove border */
+}
+
+/* For Mozilla Firefox */
+input[type="range"]::-moz-range-thumb {
+    width: 18px; /* Size of the thumb */
+    height: 18px; /* Size of the thumb */
+    background: red; /* Thumb color */
+    cursor: pointer; /* Cursor on hover */
+}
+
+/* For IE/Edge */
+input[type="range"]::-ms-thumb {
+    width: 18px; /* Size of the thumb */
+    height: 18px; /* Size of the thumb */
+    background: red; /* Thumb color */
+    cursor: pointer; /* Cursor on hover */
+}
+
+.sites a:hover {
+  background: red;
+  color: white;
+}
+
+.active {
+  background: red!important;
+}
+
+.fa.activated {
+  color: #FFD700;
+}
+
+.btn:hover {
+  background: red!important;
+}

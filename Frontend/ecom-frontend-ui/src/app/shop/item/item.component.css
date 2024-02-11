@@ -1,0 +1,7 @@
+h4, p, i {
+  color: black!important;
+}
+
+.btn:hover {
+  background: red!important;
+}
