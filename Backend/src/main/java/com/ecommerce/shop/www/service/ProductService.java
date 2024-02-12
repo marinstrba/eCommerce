@@ -29,6 +29,11 @@ public class ProductService {
         return productRepository.findAll().stream().map(product -> mapToProductDTO(product)).toList();
     }
 
+    public ProductDTO getProductByName(String name) {
+        Product product = findProductByName(name);
+        return mapToProductDTO(product);
+    }
+
     public void removeProductFromStock(String name){
        Product product = findProductByName(name);
        productRepository.delete(product);
@@ -38,9 +43,15 @@ public class ProductService {
         return productRepository.count();
     }
 
+    public List<ProductDTO> getAllProductsByCategory(String category) {
+        return productRepository.findByProductCategory(category).stream().map(product -> mapToProductDTO(product)).toList();
+    }
+
     public long countProductsByCategory(String category) {
         return productRepository.countByProductCategory(category);
     }
+
+
 
     private static ProductDTO mapToProductDTO(Product product){
         ProductDTO productDTO = ProductDTO.builder()

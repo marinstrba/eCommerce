@@ -18,4 +18,8 @@ export class ShopService {
     return this.httpClient.get<number>(`http://localhost:8080/product/available/category/${category}`);
   }
 
+  getProductByCategory(category: string): Observable<Array<ProductDTO>> {
+    return this.httpClient.get<Array<ProductDTO>>(`http://localhost:8080/product/available/${category}`)
+  }
+
 }

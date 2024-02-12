@@ -22,9 +22,13 @@ public class ProductController {
 
     @GetMapping("/get")
     @ResponseStatus(HttpStatus.OK)
-    public List<ProductDTO> getProduct(){
+    public List<ProductDTO> getProducts(){
         return productService.getAllProducts();
     }
+
+    @GetMapping("/get/{name}")
+    @ResponseStatus(HttpStatus.OK)
+    public ProductDTO getProduct(@PathVariable String name){return productService.getProductByName(name);}
 
     @DeleteMapping("/remove/{name}")
     @ResponseStatus(HttpStatus.OK)
@@ -34,8 +38,13 @@ public class ProductController {
     @ResponseStatus(HttpStatus.OK)
     public long numberOfProducts(){return productService.getNumberOfProducts();}
 
+    @GetMapping("/available/{category}")
+    @ResponseStatus(HttpStatus.OK)
+    public List<ProductDTO> getProductsByCategory(@PathVariable String category){return productService.getAllProductsByCategory(category);}
+
     @GetMapping("/available/category/{category}")
     @ResponseStatus(HttpStatus.OK)
     public long numberOfProductsByCategory(@PathVariable String category){return productService.countProductsByCategory(category);}
+
 
 }

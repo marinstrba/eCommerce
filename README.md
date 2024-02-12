@@ -2,6 +2,8 @@
 
 Welcome to the FightStore eCommerce Website, your ultimate online destination for all things fighting gear! Built with the robust combination of Spring Boot for the backend, Angular and Bootstrap for a responsive and user-friendly frontend, and PostgreSQL for reliable data storage, this project is designed to offer a seamless shopping experience for fight enthusiasts.
 
+## 🚫⚠️ Still in progress
+
 ## Features:
 
 -> User Authentication: Secure login and registration system to keep your account safe.  
